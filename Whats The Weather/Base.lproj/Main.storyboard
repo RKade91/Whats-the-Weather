@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Whats_The_Weather" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weather.png" translatesAutoresizingMaskIntoConstraints="NO" id="nVV-Um-LWW">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whats The Weather?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COS-bE-66p">
+                                <rect key="frame" x="23" y="20" width="274" height="38"/>
+                                <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="27"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a city" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K9E-Ro-3n8">
+                                <rect key="frame" x="23" y="114" width="274" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Skl-94-MV0">
+                                <rect key="frame" x="136" y="152" width="49" height="30"/>
+                                <state key="normal" title="Search">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="findWeather:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="UlE-5x-f3d"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Moq-r7-q9o">
+                                <rect key="frame" x="16" y="224" width="288" height="190"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="COS-bE-66p" secondAttribute="trailing" constant="7" id="9Nl-Jq-VAK"/>
+                            <constraint firstItem="Moq-r7-q9o" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="9ru-f8-pAT"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Moq-r7-q9o" secondAttribute="bottom" constant="111" id="F2U-l6-V94"/>
+                            <constraint firstItem="Moq-r7-q9o" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="Gcd-aw-Spt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nVV-Um-LWW" secondAttribute="trailing" constant="-16" id="JCg-Nn-DnO"/>
+                            <constraint firstItem="Moq-r7-q9o" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="O8p-fw-ZLZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Skl-94-MV0" secondAttribute="trailing" constant="119" id="U9h-UN-g9h"/>
+                            <constraint firstItem="Moq-r7-q9o" firstAttribute="top" secondItem="Skl-94-MV0" secondAttribute="bottom" constant="8" id="V9w-vo-agU"/>
+                            <constraint firstItem="nVV-Um-LWW" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="Vmc-CZ-xmq"/>
+                            <constraint firstItem="K9E-Ro-3n8" firstAttribute="top" secondItem="COS-bE-66p" secondAttribute="bottom" constant="56" id="VxF-ik-qcn"/>
+                            <constraint firstItem="Skl-94-MV0" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="120" id="gIz-lK-Se6"/>
+                            <constraint firstItem="COS-bE-66p" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="hLt-oO-cBh"/>
+                            <constraint firstItem="K9E-Ro-3n8" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="7" id="iMo-mG-THa"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="nVV-Um-LWW" secondAttribute="bottom" id="iYl-lQ-TpW"/>
+                            <constraint firstItem="nVV-Um-LWW" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="ibp-er-NeG"/>
+                            <constraint firstItem="Skl-94-MV0" firstAttribute="top" secondItem="K9E-Ro-3n8" secondAttribute="bottom" constant="8" id="imj-NX-c9S"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="K9E-Ro-3n8" secondAttribute="trailing" constant="7" id="lyZ-BW-ZsP"/>
+                            <constraint firstItem="COS-bE-66p" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="7" id="mDP-Bo-sAi"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Moq-r7-q9o" secondAttribute="bottom" constant="154" id="r39-Bv-Mg1"/>
+                            <constraint firstItem="Moq-r7-q9o" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="v0Y-tI-UfU"/>
+                            <constraint firstItem="Moq-r7-q9o" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="xl4-N8-Epc"/>
+                            <constraint firstItem="Moq-r7-q9o" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="yLW-Hy-gpl"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="resultLabel" destination="Moq-r7-q9o" id="SY8-ha-Pg2"/>
+                        <outlet property="userCity" destination="K9E-Ro-3n8" id="4MV-Vp-uKk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="weather.png" width="640" height="960"/>
+    </resources>
+</document>
